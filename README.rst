@@ -1,18 +1,23 @@
-Base Skeleton to start your application using Flask-AppBuilder
+Flask Appbuilder Practice Project - Mskim
 --------------------------------------------------------------
 
-- Install it::
+- Python Virtualenv::
 
-	pip install flask-appbuilder
-	git clone https://github.com/dpgaspar/Flask-AppBuilder-Skeleton.git
+    # install and setting virtualenv
+    $ pip install virtualenv
+    $ python3 -m venv venv
+
+    # activate virtualenv
+    $ source venv/bin/activate
+    (if os is windows, use call instead of source. $ call venv/scripts/activate)
+
+    # install require packages
+    $ pip install -r requirements.txt
 
 - Run it::
 
-    $ export FLASK_APP=app
     # Create an admin user
     $ flask fab create-admin
-    # Run dev server
-    $ flask run
 
-
-That's it!!
+    # Start a development web server on port 8080
+    $ python run.py

@@ -24,10 +24,17 @@ Flask Appbuilder Practice Project - Mskim
 
 - User infomation::
 
-    Username    Password    role
-    admin       admin1234   admin
-    user1       1234        user
-    user2       1234        manager
-    user3       1234        user
-    user4       1234        user
+    +---------+-----------+----------+
+    |Username | Password  |  role    |
+    +=========+===========+==========+
+    |admin    | admin1234 |  admin   |
+    +---------+-----------+----------+
+    |user1    | 1234      |  user    |
+    +---------+-----------+----------+
+    |user2    | 1234      |  manager |
+    +---------+-----------+----------+
+    |user3    | 1234      |  user    |
+    +---------+-----------+----------+
+    |user4    | 1234      |  user    |
+    +---------+-----------+----------+
     

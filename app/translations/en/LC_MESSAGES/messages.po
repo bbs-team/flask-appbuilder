@@ -1,17 +1,18 @@
-# Translations template for PROJECT.
+# English translations for PROJECT.
 # Copyright (C) 2019 ORGANIZATION
 # This file is distributed under the same license as the PROJECT project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2019-11-21 14:46+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2019-11-21 13:04+0900\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -35,15 +36,15 @@ msgstr ""
 
 #: app/views.py:18
 msgid "post title"
-msgstr ""
+msgstr "Title"
 
 #: app/views.py:19
 msgid "post content"
-msgstr ""
+msgstr "Content"
 
 #: app/views.py:26
 msgid "Post Menu"
-msgstr ""
+msgstr "Post"
 
 #: app/templates/404.html:4
 msgid "Page not found"

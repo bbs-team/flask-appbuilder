@@ -1,36 +1,30 @@
 from flask import render_template
+from flask_babel import gettext as __, lazy_gettext as _
 from flask_appbuilder.models.sqla.interface import SQLAInterface
 from flask_appbuilder import ModelView, ModelRestApi
 
 from . import appbuilder, db
+from app.models import Post
 
-"""
-    Create your Model based REST API::
+class PostModelView(ModelView):
+  datamodel = SQLAInterface(Post)
 
-    class MyModelApi(ModelRestApi):
-        datamodel = SQLAInterface(MyModel)
+  list_title = _('List post')
+  add_title = _('Add post')
+  edit_title = _('Edit post')
+  show_title = _('Show post')
 
-    appbuilder.add_api(MyModelApi)
+  label_columns = {
+    "title": _("post title"),
+    "content": _("post content")
+  }
 
-
-    Create your Views::
-
-
-    class MyModelView(ModelView):
-        datamodel = SQLAInterface(MyModel)
-
-
-    Next, register your Views::
-
-
-    appbuilder.add_view(
-        MyModelView,
-        "My View",
-        icon="fa-folder-open-o",
-        category="My Category",
-        category_icon='fa-envelope'
-    )
-"""
+appbuilder.add_view(
+  PostModelView,
+  "Post",
+  icon="fa-file-text",
+  label=_('Post Menu')
+)
 
 """
     Application wide 404 error handler
@@ -38,12 +32,11 @@ from . import appbuilder, db
     
 @appbuilder.app.errorhandler(404)
 def page_not_found(e):
-    return (
-        render_template(
-            "404.html", base_template=appbuilder.base_template, appbuilder=appbuilder
-        ),
-        404,
-    )
-
+  return (
+    render_template(
+      "404.html", base_template=appbuilder.base_template, appbuilder=appbuilder
+    ),
+    404,
+  )
 
 db.create_all()
